@@ -9,12 +9,12 @@ spec:
        app: online-shop
   template:
     metadata:
-      Labels:
+      labels:
         app: online-shop
     spec:
       containers:
         - name: online-shop
-          image: didin8080/online-shop
+          image: didin8080/online-shop:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
