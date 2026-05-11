@@ -27,10 +27,8 @@ from taggit.models import Tag
 
 from django.contrib.auth.decorators import login_required
 
-
-
-
-
+def health_check(request):
+    return JsonResponse({"status": "ok"})
 
 def homePage(request, tag_slug=None):
     products = Product.objects.filter(status='published')

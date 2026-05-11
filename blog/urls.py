@@ -5,6 +5,7 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', views.homePage, name='home'),
+    path("health", views.health_check),
     path('tag/<slug:tag_slug>', views.homePage, name='products_by_tag'),
     path('product/<int:pk>/<slug:slug>/', views.productDetail, name='product_detail'),
     path('cart/', views.cart, name='cart'),
